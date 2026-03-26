@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OTP Validation Form</title>
+
+<style>
+body{
+font-family: Arial;
+background:#f2f2f2;
+padding:40px;
+}
+
+.form-box{
+background:white;
+padding:20px;
+width:400px;
+margin:auto;
+border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+
+input{
+width:100%;
+padding:8px;
+margin:8px 0;
+border:2px solid #ccc;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:10px;
+background:blue;
+color:white;
+border:none;
+border-radius:5px;
+margin-top:10px;
+cursor:pointer;
+}
+
+.error{
+border-color:red;
+background:#ffe6e6;
+}
+
+.success{
+border-color:green;
+background:#e6ffe6;
+}
+</style>
+</head>
+
+<body>
+
+<div class="form-box">
+
+<h2>Login with OTP</h2>
+
+<form id="myForm">
+
+<input type="text" id="name" placeholder="Enter Name">
+
+<input type="email" id="email" placeholder="Enter Email">
+
+<button type="button" onclick="sendEmailOTP()">Send Email OTP</button>
+
+<input type="text" id="emailOTP" placeholder="Enter Email OTP">
+
+
+<input type="tel" id="phone" placeholder="Enter Phone">
+
+<button type="button" onclick="sendPhoneOTP()">Send Phone OTP</button>
+
+<input type="text" id="phoneOTP" placeholder="Enter Phone OTP">
+
+<button type="submit">Login</button>
+
+</form>
+
+</div>
+
+
+<script>
+
+let emailOtpGenerated;
+let phoneOtpGenerated;
+
+
+// Email OTP
+function sendEmailOTP(){
+
+emailOtpGenerated = Math.floor(100000 + Math.random()*900000);
+
+alert("Email OTP sent: " + emailOtpGenerated); 
+// Normally send using backend
+
+}
+
+
+// Phone OTP
+function sendPhoneOTP(){
+
+phoneOtpGenerated = Math.floor(100000 + Math.random()*900000);
+
+alert("Phone OTP sent: " + phoneOtpGenerated); 
+// Normally send using SMS API
+
+}
+
+
+// Form Submit
+document.getElementById("myForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let emailOtp = document.getElementById("emailOTP").value;
+let phoneOtp = document.getElementById("phoneOTP").value;
+
+if(emailOtp == emailOtpGenerated && phoneOtp == phoneOtpGenerated){
+
+alert("Login Successful");
+
+}else{
+
+alert("Invalid OTP");
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
