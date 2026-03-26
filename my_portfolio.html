@@ -1,24 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 >My Portfolio</h1>
-    <p>This is my portfolio website where I showcase my projects and skills.</p>
 
-    <h2>Projects</h2>
-    <ul>
-        <li><a href="project1.html">Project 1: Web Development</a></li>
-        <li><a href="project2.html">Project 2: Data Analysis</a></li>
-        <li><a href="project3.html">Project 3: Machine Learning</a></li>
-    </ul>
+  <!-- 🔹 Navbar -->
+  <header class="navbar">
+    <h2 class="logo">Portfolio</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
+  <!-- 🔹 Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hello, I'm Rohit 👋</h1>
+      <p>Frontend Developer | HTML | CSS | JavaScript</p>
+      <button>View Projects</button>
+    </div>
+    <img src="profile.jpg" alt="profile">
+  </section>
+
+  <!-- 🔹 Projects -->
+  <section class="projects">
+    <h2>My Projects</h2>
+    <div class="project-container">
+
+      <div class="card">
+        <h3>Website Design</h3>
+        <p>Responsive website using HTML & CSS</p>
+      </div>
+
+      <div class="card">
+        <h3>Data Analysis</h3>
+        <p>Python + Pandas project</p>
+      </div>
+
+      <div class="card">
+        <h3>Machine Learning</h3>
+        <p>Prediction model project</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 🔹 Contact -->
+  <section class="contact">
     <h2>Contact Me</h2>
-    <p>You can reach me at <a href="mailto:rohitcharak420@gmail.com">rohitcharak420@gmail.com</a></p>
+    <p>Email: rohitcharak420@gmail.com</p>
+  </section>
 
-    
 </body>
 </html>
