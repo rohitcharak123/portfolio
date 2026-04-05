@@ -1,0 +1,57 @@
+.contact-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-description {
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+}
+
+.contact-form-container {
+  padding: 2.5rem;
+  text-align: left;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--card-border);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.submit-btn {
+  justify-content: center;
+  margin-top: 1rem;
+  width: 100%;
+}
